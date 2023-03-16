@@ -1,4 +1,4 @@
-#include< stdio.h>
+#include < stdio.h>
 /* c programm that prints using printf */
 /**
  * main -Entry point
