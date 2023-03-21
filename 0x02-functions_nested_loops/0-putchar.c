@@ -1,9 +1,7 @@
 #include <stdio.h>
-/*a program that prints _putchar, followed by a new line*/
 /**
- * main -Entry point
- *
- * Return: Always 0 (success)
+ * main - a function that prits _putchar
+ * Return: (0)
  */
 int main(void)
 {
@@ -18,3 +16,4 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
+
