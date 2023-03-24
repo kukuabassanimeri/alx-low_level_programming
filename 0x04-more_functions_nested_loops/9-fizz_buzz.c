@@ -17,10 +17,13 @@ int main(void)
 	{
 		if (num % 15 == 0)
 		{
-			printf("FizzBUZZ");
+			printf("FizzBuzz");
 		} else if (num % 3 == 0)
 		{
-			printf("BUZZ");
+			printf("Fizz");
+		} else if (num % 5 == 0)
+		{
+			printf("Buzz");
 		} else
 		{
 			printf("%d", num);
