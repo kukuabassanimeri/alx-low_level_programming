@@ -1,6 +1,8 @@
 #ifndef main_h
 #define main_h
 #include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
 
 int _isupper(int c);
 int _putchar(char c);
