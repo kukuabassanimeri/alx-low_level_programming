@@ -4,18 +4,24 @@
 /**
  * string_toupper - changes all lowercas letter
  * @str: string to be changed
- * Return: string
+ * Return: pointer to the changed string
+ *
  */
 char *string_toupper(char *str)
 {
-	int index = 0;
+	int ascii_value;
+	int length = strlen(str);
+	int i = 0;
 
-	while (str[index])
+	for (i = 0; i < length; i++)
 	{
-		if (str[index] >= 'a' && str[index] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			str[index] -= 32;
-			index++;
+			ascii_value = (int)str[i] - 32;
+			str[i] = (char)ascii_value;
+		} else
+		{
+			str[i] = str[i];
 		}
 	}
 	return (str);
