@@ -19,25 +19,25 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int name_l = 0, own_l = 0;
 
 	if (name != NULL && owner != NULL)
-        {
-                name_l = _strlen(name) + 1;
-                own_l = _strlen(owner) + 1;
-                max_dog = malloc(sizeof(dog_t));
-                if (max_dog == NULL)
-                        return (NULL);
-                max_dog->name = malloc(sizeof(char) * name_l);
-                if (max_dog->name == NULL)
-                {
-                        free(max_dog);
-                        return (NULL);
-                }
-                max_dog->owner = malloc(sizeof(char) * own_l);
-                if (max_dog->owner == NULL)
-                {
-                        free(max_dog->name);
-                        free(max_dog);
-                        return (NULL);
-		  }
+	{
+		name_l = _strlen(name) + 1;
+		own_l = _strlen(owner) + 1;
+		max_dog = malloc(sizeof(dog_t));
+		if (max_dog == NULL)
+			return (NULL);
+		max_dog->name = malloc(sizeof(char) * name_l);
+		if (max_dog->name == NULL)
+		{
+			free(max_dog);
+			return (NULL);
+		}
+		max_dog->owner = malloc(sizeof(char) * own_l);
+		if (max_dog->owner == NULL)
+		{
+			free(max_dog->name);
+			free(max_dog);
+			return (NUL);
+		}
                 max_dog->name = _strcpy(max_dog->name, name);
                 max_dog->owner = _strcpy(max_dog->owner, owner);
                 max_dog->age = age;
